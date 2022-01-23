@@ -2,15 +2,16 @@
 
 #include<SDL.h>
 
-int main(int argc , char* argv[]){
-	
+  SDL_Window* window;
+  Uint32 windowID;
 
+int initSDL() {
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) != 0) {
         SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
         return 1;
     }
 
-    SDL_Window* window;                    // Declare a pointer
+                      // Declare a pointer
 
     SDL_Init(SDL_INIT_VIDEO);              // Initialize SDL2
 
@@ -30,6 +31,10 @@ int main(int argc , char* argv[]){
         printf("Could not create window: %s\n", SDL_GetError());
         return 1;
     }
+}
+
+int main(int argc , char* argv[]){
+    initSDL();
 
     while (1) {
         SDL_Event event;
