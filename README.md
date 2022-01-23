@@ -1,0 +1,2 @@
+# Fatman
+A Pacman clone
