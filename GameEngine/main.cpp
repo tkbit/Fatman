@@ -4,7 +4,7 @@ int main(int argc, char* argv[]) {
 
 	game* g = new game();
 
-	if (g->createWindow(1280, 720)) {
+	if (g->createWindow(600, 500)) {
 		g->start();
 		delete g;
 		return 0;
