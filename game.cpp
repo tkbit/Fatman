@@ -2,7 +2,7 @@
 
 bool game::initGame() {
 
-	assetSurface = SDL_LoadBMP("spriteSheet.bmp");
+	assetSurface = SDL_LoadBMP("assets/spriteSheet.bmp");
 	assetTexture = SDL_CreateTextureFromSurface(renderer, assetSurface);
 	SDL_FreeSurface(assetSurface);
 
