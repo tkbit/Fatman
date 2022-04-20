@@ -3,6 +3,7 @@
 #include<SDL.h>
 
   SDL_Window* window;
+  SDL_Renderer* renderMain;
   Uint32 windowID = NULL;
   int status = 0;
   bool programRunning = true;
@@ -68,7 +69,6 @@ int main(int argc, char* argv[]){
         SDL_Delay(1);
     }
 
-    // Close and destroy the window
     SDL_DestroyWindow(window);
 
     SDL_Quit();
